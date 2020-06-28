@@ -26,7 +26,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "src/scripts.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bikes-ui"
+    }
+  },
+  "defaultProject": "bikes-ui",
+  "cli": {
+    "analytics": "99b3fb0e-80c6-4a99-a3f6-04039d142104"
+  }
 }

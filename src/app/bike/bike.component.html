@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Bikes list</h2>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Owner name</th>
+            <th scope="col">Owner email</th>
+            <th scope="col">Model</th>
+            <th scope="col">Purchase date</th>
+            <th scope="col">Purchase price</th>
+          </tr>
+        </thead>
+        <tbody *ngIf='bikes'>
+          <tr *ngFor='let bike of bikes'>
+            <th scope="row">{{ bike.id }}</th>
+            <td>
+                <a [routerLink]="['/details', bike.id]">{{ bike.name }}</a>
+            </td>
+            <td>{{ bike.email }}</td>
+            <td>{{ bike.model }}</td>
+            <td>{{ bike.purchaseDate }}</td>
+            <td>{{ bike.purchasePrice }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
